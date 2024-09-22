@@ -14,7 +14,7 @@ body {
 
 header {
   background-color: grey;
-  color: rgb(237, 237, 237);
+  color: rgb(211, 211, 211);
 }
 
 h1 {
@@ -35,7 +35,7 @@ nav ul {
 
 nav a {
   display: block;
-  color: #ffffff;
+  color: rgb(211, 211, 211);
   padding: 1rem;
   text-decoration: none;
   text-align: center;
@@ -60,7 +60,7 @@ h2 {
   font-family: "Courier New', Courier, monospace";
   text-align: center;
   background-color: grey;
-  color: rgb(237, 237, 237);
+  color: rgb(211, 211, 211);
   font-size: larger;
   margin: 0;
   padding: 10px;
@@ -139,7 +139,7 @@ figcaption {
 
 footer {
   background-color: grey;
-  color: white;
+  color: rgb(211, 211, 211);
   grid-column: 1/4;
   height: 100px;
   justify-content: center;
