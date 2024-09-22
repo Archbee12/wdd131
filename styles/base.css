@@ -7,7 +7,6 @@
 body {
   height: 300px;
   background-color: rgba(141, 138, 138, 0.291);
-  max-width: 100%;
   font-family: "Roboto";
   font-size: larger;
 }
@@ -51,9 +50,14 @@ nav a:hover {
 
 main {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  max-width: 100%;
+  grid-template-columns: 2fr 1fr;
   /* width: 1200px; */
+
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 8px;
+  max-width: 1260px;
+  margin: 20px auto;
 }
 
 h2 {
@@ -141,19 +145,41 @@ footer {
   background-color: grey;
   color: rgb(211, 211, 211);
   grid-column: 1/4;
-  height: 100px;
+  height: 100%;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 footer p {
   text-align: center;
   padding-top: 20px;
   padding-bottom: 0px;
+
 }
 
 #lastModified {
   padding-top: 0%;
 }
+
+/* @media screen and (max-width: 1200px) {
+
+  main {
+    display: block;
+    height: auto;
+    max-width: 1200px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav ul li {
+    flex: 1 1 100%;
+  }
+} */
 
 @media screen and (max-width: 600px) {
 
