@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400&family=Source+Code+Pro&display=swap');
+
 * {
   box-sizing: border-box;
-  max-width: 100%;
 }
 
 body {
   height: 300px;
   background-color: rgba(141, 138, 138, 0.291);
   max-width: 100%;
+  font-family: "Roboto";
+  font-size: larger;
 }
 
 header {
@@ -15,14 +18,15 @@ header {
 }
 
 h1 {
-  font-size: larger;
+  font-family: "Source Code Pro";
+  font-size: x-large;
   padding: 1rem;
   text-align: center;
+  padding-top: 30px;
 }
 
 nav {
   background-color: hsl(36, 7%, 73%);
-  display: flex;
 }
 
 nav ul {
@@ -35,19 +39,29 @@ nav a {
   padding: 1rem;
   text-decoration: none;
   text-align: center;
-  flex: 1 1 auto;
+  margin-right: 40px;
+  margin-left: 0px;
+  font-family: "Source Code Pro";
+  font-weight: 700;
+}
+
+nav a:hover {
+  border: 1px solid;
 }
 
 main {
   display: grid;
   grid-template-columns: 3fr 1fr;
+  max-width: 100%;
+  /* width: 1200px; */
 }
 
 h2 {
+  font-family: "Courier New', Courier, monospace";
   text-align: center;
   background-color: grey;
   color: rgb(237, 237, 237);
-  font-size: large;
+  font-size: larger;
   margin: 0;
   padding: 10px;
   border-top-left-radius: 20px;
@@ -60,8 +74,12 @@ h2 {
   border-radius: 20px;
   border-style: solid;
   border-color: grey;
-  padding-bottom: 20px;
   margin: 20px 20px;
+}
+
+.links {
+  align-items: center;
+  padding: 100px 40px;
 }
 
 .my_img {
@@ -82,6 +100,7 @@ img {
 p {
   text-align: justify;
   padding: 1rem;
+  
 }
 
 .country{
@@ -94,8 +113,8 @@ h3 {
 
 hr {
   align-content: center;
-  margin-right: 20px;
-  margin-left: 20px
+  margin-right: 40px;
+  margin-left: 40px
 }
 
 .country_img {
@@ -112,9 +131,11 @@ figure {
 
 figcaption {
   font-style: italic;
+  font-family: sans-serif;
   margin:  auto;
   padding: 2px;
   text-align: center;
+
 }
 
 footer {
@@ -122,8 +143,17 @@ footer {
   color: white;
   grid-column: 1/4;
   height: 100px;
+  justify-content: center;
+}
+
+footer p {
   text-align: center;
-  padding: 1rem;
+  padding-top: 20px;
+  padding-bottom: 0px;
+}
+
+#lastModified {
+  padding-top: 0%;
 }
 
 @media screen and (max-width: 600px) {
@@ -132,15 +162,18 @@ footer {
   main {
     display: block;
     height: auto;
+    max-width: 1200px;
   }
+}
+
+@media screen and (min-width: 600px) {
   nav ul {
     display: flex;
+    justify-content: space-between;
   }
 
-  @media screen  and (min-width: 600px) {
-    nav ul {
-      display: flex;
-    }
+  nav ul li {
+    flex: 1 1 100%;
   }
-    
 }
+    
