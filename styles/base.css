@@ -93,17 +93,16 @@ h2 {
 }
 
 img {
-  overflow-clip-margin: content-box;
   overflow: clip;
 }
 
 p {
   text-align: justify;
   padding: 1rem;
-  
+
 }
 
-.country{
+.country {
   margin: 10px 0px;
 }
 
@@ -132,7 +131,7 @@ figure {
 figcaption {
   font-style: italic;
   font-family: sans-serif;
-  margin:  auto;
+  margin: auto;
   padding: 2px;
   text-align: center;
 
@@ -176,4 +175,3 @@ footer p {
     flex: 1 1 100%;
   }
 }
-    
