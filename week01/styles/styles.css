@@ -19,13 +19,13 @@ header {
   height: 50px;
 }
 
-.navigation {
+nav ul {
   display: flex;
   align-items: center;
   background-color: black;
 }
 
-.navigation a {
+nav ul a {
   display: block;
   color: #eee;
   padding: 0.75rem;
