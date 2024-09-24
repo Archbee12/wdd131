@@ -179,7 +179,6 @@ h2 {
 .resource-links li a {
   color: #fdfdfe;
   font-family: "Raleway";
-  font-size: 900;
   line-height: 50px;
 }
 
@@ -202,11 +201,10 @@ footer {
 
 
 @media screen and (min-width: 600px) {
-  .card:nth-child(2){
+  .card:nth-child(2) {
     display: flex;
     grid-template-columns: 3fr 1fr;
     max-width: 600px;
     margin: 20px auto;
-    padding: auto 0rem;
   }
 }
