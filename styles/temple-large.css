@@ -1,0 +1,29 @@
+/* Larger Views ******************************/
+@media (min-width: 780px) {
+  /* header h1 {
+    margin-bottom: 10px;
+  } */
+  
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 500px;
+  }
+
+  nav a {
+    flex: 1 1 100%;
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
