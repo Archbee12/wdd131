@@ -25,14 +25,8 @@ header {
   box-shadow: 0 0 30px #333;
 }
 
-/* header,
-main {
-  margin: 0 auto;
-} */
-
 h1 {
   font-size: 2rem;
-  /* margin-top: 1rem; */
 }
 
 nav {
@@ -59,10 +53,6 @@ nav a:hover {
   color: #253237;
   transition: color 0.3s;
 }
-
-/* .active {
-  color: rgb(4, 95, 101);
-} */
 
 .nav a:hover,
 .nav a:active {
