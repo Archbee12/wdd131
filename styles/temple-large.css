@@ -1,9 +1,9 @@
 /* Larger Views ******************************/
 @media (min-width: 760px) {
-  /* header h1 {
-    margin-bottom: 10px;
-  } */
   
+  header, main, footer {
+    max-width: 100%;
+  }
   header {
     display: flex;
     flex-direction: row;

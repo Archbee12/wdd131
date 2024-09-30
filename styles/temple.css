@@ -11,8 +11,12 @@ body {
 
 header, footer {
   background-color: #253237;
+  
 }
 
+header, main, footer {
+  max-width: 760px;
+}
 
 /* mobile **************************/
 header {
