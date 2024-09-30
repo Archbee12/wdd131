@@ -27,4 +27,8 @@
   .hamburger {
     display: none;
   }
+
+  main, .temples {
+    width: 100%;
+  }
 }
