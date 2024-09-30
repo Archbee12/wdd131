@@ -70,6 +70,7 @@ nav a:hover {
 } */
 
 .hamburger {
+  width: 100%;
   display: block;
   flex-direction: column;
   height: 30px;
