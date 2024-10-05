@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Place</title>
+  <meta name="description"
+    content="WDD 131 - Dynamic Web Fundamentals Deborah Sarah Okon A project on Website Responsive using Media Query on both Mobiles and large screens." />
+  
+  <meta name="author" content="Deborah Sarah Okon">
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Damion&family=Roboto:wght@400;700;900&display=swap"
+    rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Lagos, Nigeria</h1>
+  </header>
+  <main>
+    <div class="hero">
+      <picture>
+        <source media="(min-width: 1000px)" srcset="images/hero-larg.webP">
+        <source media="(min-width: 600px)" srcset="images/hero-medium.webp">
+        <img src="images/small-hero.webp" alt="Landscape of Lagos Tourist" width="221" height="261">
+      </picture>
+      <section class="data">
+        <h2>Data</h2>
+        <!-- <img src="images/datas.svg" alt="Data Analytics Icon" class="data-icon"> -->
+        <ul class="info">
+          <li><p><span class="labels">Area:</span><span class="value"> 567.041 sq km</span></p></li>
+          <li><p><span class="labels">Population:</span><span class="value"> 27,691,018</span></p></li>
+          <li><p><span class="labels">Capital:</span><span class="value"> Lagos</span></p></li>
+          <li><p><span class="labels">Languages:</span><span class="value"> English</span></p></li>
+          <li><p><span class="labels">Currency:</span><span class="value"> Nigerian Naira</span></p></li>
+          <li><p><span class="labels">Timezone:</span><span class="value"> UTC:3</span></p></li>
+          <li><p><span class="labels">Calling Code:</span><span class="value"> +234</span></p></li>
+          <li><p><span class="labels">Internet TLD:</span><span class="value"> MTN</span></p></li>
+        </ul>
+      </section>
+      <section class="weather">
+        <h2>Weather</h2>
+        <img src="images/weather.svg" alt="Sunny Weather Icon" class="weather-icon">
+        <ul>
+          <li><p><span class="labels">Temperature:</span> <span class="temp">70</span>°F</p></li>
+          <li><p><span class="labels">Conditions:</span> <span id="conditions">Clear</span></p></li>
+          <li><p><span class="labels">Wind:</span> <span id="wind">5 km/h</span></p></li>
+          <li><p><span class="labels">Wind Chill:</span> <span id="windchill"></span></p></li>
+        </ul>
+      </section>
+    </div>
+  </main>
+  <footer>
+    <p>&copy;<span id="currentYear"> </span> 🌟 Deborah Sarah Okon 🌟 Nigeria </p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

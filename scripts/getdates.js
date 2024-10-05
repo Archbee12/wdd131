@@ -12,7 +12,7 @@ let oLastModif = new Date(document.lastModified);
 lastModified.innerHTML = `Last Modified: <span class="highlight">${new Intl.DateTimeFormat(
   "en-US",
   {
-    dateStyle: "full",
+    dateStyle: "medium",
     timeStyle: "medium",
   }
 ).format(today)}</span>`; 
