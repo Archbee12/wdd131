@@ -103,7 +103,7 @@ footer span {
 
   .hero img {
     width: 100%;
-    object-fit: contain;
+    height: auto;
   }
 
   .data, .weather {
