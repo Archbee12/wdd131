@@ -2,9 +2,9 @@
   --primary-color: #A4D0E1;
   --secondary-color: #115c69;
   --accent-color: #e4e0db;
+  --footer-color: #ffffff;
   --text-color: #4a3f35;
   --transparency: #a4d0e1c4;
-  --header-font: "Damion";
   --bord: 2px solid;
   }
 
@@ -56,7 +56,7 @@ h2 {
   padding: 1rem;
 }
 
-.weather-icon, .data-icon {
+.weather-icon {
   display: block;
   max-width: 100px;
   height: 100%;
@@ -64,7 +64,6 @@ h2 {
 }
 
 .labels {
-  text-align: right;
   font-weight: 700;
 }
 
@@ -77,16 +76,11 @@ li {
   line-height: 2rem;
 }
 
-p {
-  /* font-size: 1rem; */
-  text-align: center;
-}
-
 footer {
   text-align: center;
   padding: 1rem;
   background-color: var(--secondary-color);
-  color: var(--accent-color);
+  color: var(--primary-color);
   margin: -10px;
 }
 
@@ -96,6 +90,10 @@ footer p:nth-child(1) {
 
 footer p:nth-child(2) {
   margin-top: 0.125rem;
+}
+
+footer span {
+  color: var(--footer-color)
 }
 
 
