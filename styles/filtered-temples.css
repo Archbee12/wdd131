@@ -6,7 +6,7 @@
 
 body {
   background-color: #e0e5e8;
-  color: rgb(240, 240, 240);
+  color: rgb(255, 255, 255);
 }
 
 header,
@@ -141,7 +141,7 @@ img {
 }
 
 .temple-card, h3, .temple-card p {
-  color: #253237;
+  color: #12191c;
 }
 
 #title {
