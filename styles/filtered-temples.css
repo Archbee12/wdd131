@@ -1,0 +1,174 @@
+.root {
+  --accent-color: #b6bdbf;
+  --background-color: #e0e5e8;
+  --header-color: 
+
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--background-color);
+  color: rgb(240, 240, 240);
+}
+
+header,
+footer {
+  background-color: #253237;
+
+}
+
+header,
+main,
+footer {
+  max-width: 760px;
+}
+
+/* mobile **************************/
+header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* grid-gap: .5rem; */
+  padding: 20px 20px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 30px #333;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+nav {
+  background-color: #253237;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+nav a {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease-in;
+  font-weight: 700;
+  font-family: "Roboto";
+  display: none;
+}
+
+nav a:hover {
+  background-color: #eee;
+  color: #253237;
+  transition: color 0.3s;
+}
+
+.nav a:hover,
+.nav a:active {
+  color: rgb(209, 192, 192);
+}
+
+.hamburger {
+  width: 100%;
+  display: block;
+  height: 30px;
+  width: 30px;
+  right: 20px;
+  position: absolute;
+  cursor: pointer;
+  padding: 1.5rem .75rem;
+  /* display: none; */
+}
+
+.hamburger span {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 25px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: 0.2s ease-in-out;
+}
+
+.hamburger span:nth-child(1) {
+  top: 30%;
+}
+
+.hamburger span:nth-child(3) {
+  top: 70%
+}
+
+.hamburger.active span:nth-child(1) {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  top: 40%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
+
+.show a {
+  display: block;
+}
+
+.temple-card {
+  width: 400px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background-color: #b6bdbf;
+}
+
+#templesContainer {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 1rem;
+  place-items: center;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  box-shadow: 0 0 10px #333;
+  margin: 1rem;
+}
+
+#title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: #253237;
+  text-align: center;
+  padding: 2rem;
+}
+
+
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer p:nth-child(1) {
+  margin-bottom: 0;
+}
+
+footer p:nth-child(2) {
+  margin-top: 0.125rem;
+}

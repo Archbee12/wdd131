@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Picture Album Enhancement</title>
+  <meta name="description"
+    content="WDD 131 - Dynamic Web Fundamentals Deborah Sarah Okon An enhanceent of previous project by incorporating lazy loading, to respond to user interaction by filtering the displayed temple data and using Document Object Manipulation to structure html." />
+
+  <meta name="author" content="Deborah Sarah Okon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/filtered-temples.css">
+  <link rel="stylesheet" href="styles/filtered-temples-large.css">
+  <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+  <header class="header">
+    <h1>Temple Album</h1>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <nav class="navigation">
+      <a href="#" class="active" id="home" >Home</a>
+      <a href="#" id="old">Old</a>
+      <a href="#" id="new">New</a>
+      <a href="#" id="large">Large</a>
+      <a href="#" id="small">Small</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2 id="title">Home</h2>
+    <div id="templesContainer">
+    </div>
+  </main>
+  <footer>
+    <p>&copy;<span id="currentYear"> </span> 🌟 Deborah Sarah Okon 🌟 Nigeria </p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+
+</html>

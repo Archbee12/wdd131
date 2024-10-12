@@ -1,0 +1,44 @@
+/* Larger Views ******************************/
+@media (min-width: 760px) {
+
+  header,
+  main,
+  footer {
+    max-width: 100%;
+  }
+
+  header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 20px;
+  }
+
+  nav {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    width: 500px;
+  }
+
+  nav a {
+    flex: 1 1 100%;
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    margin: auto;
+  }
+
+  #templesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
