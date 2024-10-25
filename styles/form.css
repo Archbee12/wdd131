@@ -30,22 +30,19 @@ fieldset {
   padding: 1rem;
 }
 
-label[for="product"]::before {
+label[for="products"]::before {
   content: "(* Indicates Required)";
   display: block;
   padding-bottom: .25rem;
-  color: var(--accent-color-02);
-  font-size: .9em;
 }
 
 label[for="writtenReview"]::after,
 label[for="name"]::after {
   content: " (Optional)";
-  color: var(--accent-color-02);
   font-size: .9em;
 }
 
-select:required,
+/* select:required,
 input[type="date"]:required {
   border-bottom: solid 4px var(--accent-color-01);
 }
@@ -53,7 +50,7 @@ input[type="date"]:required {
 select:valid,
 input[type="date"]:valid {
   border-bottom: solid 4px var(--secondary-color);
-}
+} */
 
 #starRating {
   display: flex;

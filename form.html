@@ -22,18 +22,19 @@
   <main>
     <form method="get" action="review.html" id="productReview">
       <fieldset id="rating">
-        <label>Product Name* <select id="products" type="button" required autofocus>
-        <option disabled selected>Select a Product</option></select>
+        <label for="products">Product Name* 
+          <select id="products" type="button" required>
+            <option disabled selected>Select a Product</option value=""></select>
         </label>
       </fieldset>
       <fieldset>
         <div>Overall Rating</div>
         <div id="starRating">
-          <label>&star; <input type="radio" name="rating" id="oneStar" value="1"></label>
-          <label>&star;&star; <input type="radio" name="rating" id="twoStar" value="2"></label>
-          <label>&star;&star;&star; <input type="radio" name="rating" id="threeStar" value="3"></label>
-          <label>&star;&star;&star;&star; <input type="radio" name="rating" id="fourStar" value="4"></label>
-          <label>&star;&star;&star;&star;&star; <input type="radio" name="rating" id="fiveStar" value="5"></label>
+          <label>&star; <input type="radio" name="rating" id="oneStar" value="1" required></label>
+          <label>&star;&star; <input type="radio" name="rating" id="twoStar" value="2" required></label>
+          <label>&star;&star;&star; <input type="radio" name="rating" id="threeStar" value="3" required></label>
+          <label>&star;&star;&star;&star; <input type="radio" name="rating" id="fourStar" value="4" required></label>
+          <label>&star;&star;&star;&star;&star; <input type="radio" name="rating" id="fiveStar" value="5" required></label>
         </div>
         
       </fieldset>
