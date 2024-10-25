@@ -12,7 +12,7 @@ header, footer {
 
 h1 {
   padding: 0.5rem;
-  font: 'Roboto';
+  font-family: 'Roboto';
 }
 
 main {
@@ -28,6 +28,31 @@ form  {
 fieldset {
   border: none;
   padding: 1rem;
+}
+
+label[for="product"]::before {
+  content: "(* Indicates Required)";
+  display: block;
+  padding-bottom: .25rem;
+  color: var(--accent-color-02);
+  font-size: .9em;
+}
+
+label[for="writtenReview"]::after,
+label[for="name"]::after {
+  content: " (Optional)";
+  color: var(--accent-color-02);
+  font-size: .9em;
+}
+
+select:required,
+input[type="date"]:required {
+  border-bottom: solid 4px var(--accent-color-01);
+}
+
+select:valid,
+input[type="date"]:valid {
+  border-bottom: solid 4px var(--secondary-color);
 }
 
 #starRating {
@@ -54,7 +79,6 @@ input[type="submit"] {
 input[type="submit"]:hover {
   cursor: pointer;
   background-color: var(--primary-color);
-  transition: 1s var(--accent-color);
 }
 
 span.optional {
