@@ -58,7 +58,7 @@ input[type="submit"]:hover {
 }
 
 span.optional {
-  color: blue;
+  color: rgb(14, 14, 181);
   font-size: 14px;
 }
 
