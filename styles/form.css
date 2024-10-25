@@ -30,19 +30,7 @@ fieldset {
   padding: 1rem;
 }
 
-label[for="products"]::before {
-  content: "(* Indicates Required)";
-  display: block;
-  padding-bottom: .25rem;
-}
-
-label[for="writtenReview"]::after,
-label[for="name"]::after {
-  content: " (Optional)";
-  font-size: .9em;
-}
-
-/* select:required,
+select:required,
 input[type="date"]:required {
   border-bottom: solid 4px var(--accent-color-01);
 }
@@ -50,7 +38,7 @@ input[type="date"]:required {
 select:valid,
 input[type="date"]:valid {
   border-bottom: solid 4px var(--secondary-color);
-} */
+}
 
 #starRating {
   display: flex;
@@ -71,6 +59,12 @@ input[type="submit"] {
   height: 3rem;
   width: 100%;
   border: none;
+}
+
+option {
+  display: block;
+  width: 100%;
+  max-width: 400px;
 }
 
 input[type="submit"]:hover {

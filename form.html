@@ -22,9 +22,9 @@
   <main>
     <form method="get" action="review.html" id="productReview">
       <fieldset id="rating">
-        <label for="products">Product Name* 
-          <select id="products" type="button" required>
-            <option disabled selected>Select a Product</option value=""></select>
+        <label for="products"> Product Name 
+          <select id="products" type="button" required autofocus>
+            <option value="" disabled selected>Select a Product</option></select>
         </label>
       </fieldset>
       <fieldset>
@@ -40,7 +40,7 @@
       </fieldset>
       <fieldset>
         <label>Date of Installation
-          <input type="date" name="date" id="dateInstalled">
+          <input type="date" name="date" id="dateInstalled" required>
         </label>
       </fieldset>
       <fieldset>
