@@ -1,0 +1,83 @@
+:root {
+  --secondary-color: #253237;
+  --primary-color: #bab6b2;
+  --accent-color: #e4e0db;
+  --color: #ffffff;}
+
+header, footer {
+  background-color: var(--secondary-color);
+  color: var(--color);
+  text-align: center;
+}
+
+h1 {
+  padding: 0.5rem;
+  font: 'Roboto';
+}
+
+main {
+  justify-items: center;
+}
+
+form  {
+  background-color: var(--accent-color);
+  max-width: 460px;
+  border-radius: .2rem;
+}
+
+fieldset {
+  border: none;
+  padding: 1rem;
+}
+
+#starRating {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+input[type="radio"] {
+  display: block;
+  margin: 0 auto;
+}
+
+select,
+textarea,
+input[type="date"],
+input[type="text"],
+input[type="submit"] {
+  height: 3rem;
+  width: 100%;
+  border: none;
+}
+
+input[type="submit"]:hover {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  transition: 1s var(--accent-color);
+}
+
+span.optional {
+  color: blue;
+  font-size: 14px;
+}
+
+#italics {
+  font-style: italic;
+}
+
+textarea {
+  height: 90px;
+}
+
+footer {
+  padding: 1rem;
+}
+
+footer p:nth-child(1) {
+  margin-bottom: 0;
+}
+
+footer p:nth-child(2) {
+  margin-top: 0.125rem;
+}

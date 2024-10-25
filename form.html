@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Review Form</title>
+  <meta name="description"
+    content="WDD 131 - Dynamic Web Fundamentals Deborah Sarah Okon A project on Website Responsive using Media Query on both Mobiles and large screens." />
+  
+  <meta name="author" content="Deborah Sarah Okon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+  
+  <main>
+    <form method="get" action="review.html" id="productReview">
+      <fieldset id="rating">
+        <label>Product Name* <select id="products" type="button" required>
+        <option disabled selected>Select a Product</option></select>
+        </label>
+      </fieldset>
+      <fieldset>
+        <div>Overall Rating</div>
+        <div id="starRating">
+          <label>&star; <input type="radio" name="rating" id="oneStar" value="1"></label>
+          <label>&star;&star; <input type="radio" name="rating" id="twoStar" value="2"></label>
+          <label>&star;&star;&star; <input type="radio" name="rating" id="threeStar" value="3"></label>
+          <label>&star;&star;&star;&star; <input type="radio" name="rating" id="fourStar" value="4"></label>
+          <label>&star;&star;&star;&star;&star; <input type="radio" name="rating" id="fiveStar" value="5"></label>
+        </div>
+        
+      </fieldset>
+      <fieldset>
+        <label>Date of Installation
+          <input type="date" name="date" id="dateInstalled">
+        </label>
+      </fieldset>
+      <fieldset>
+        <div>Which features did you find useful in the product? <span id="italics">(Check all that apply)</span></div>
+        <div><label><input type="checkbox" name="features" id="durability"> Durability</label></div>
+        <div><label><input type="checkbox" name="features" id="ease"> Ease of Use</label></div>
+        <div><label><input type="checkbox" name="features" id="performance"> Performance</label></div>
+        <div><label><input type="checkbox" name="features" id="design"> Design</label></div>
+      </fieldset>
+      <fieldset>
+        <label>Written Review <span class="optional">(Optional)</span> <textarea name="review" id="review"></textarea> </label>
+      </fieldset>
+      <fieldset>
+        <label>Your Name <span class="optional">(Optional)</span> <input type="text" name="name" id="username"></label>
+      </fieldset>
+      <fieldset>
+        <input type="submit" value="Post Review">
+      </fieldset>
+    </form>
+  </main>
+  <footer>
+    <p>&copy;<span id="currentYear"> </span> 🌟 Deborah Sarah Okon 🌟 Nigeria </p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>
