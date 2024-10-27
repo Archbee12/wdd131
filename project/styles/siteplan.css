@@ -6,13 +6,11 @@
 --heading-font: "Roboto Slab";
 --paragraph-font: 'Roboto', Helvetica, sans-serif;
 
---paragraph-color-on-white: #396E94;
+--paragraph-color-on-white: #5b635c;
 --paragraph-color-on-color: white;
 --paragraph-background-color: #291840 ;
---nav-link-color: #396E94;
---nav-background-color: #9babef;
---nav-hover-link-color: #7c6f8c;
---nav-hover-background-color: #ebebeb;
+--nav-link-color: #eaedea;
+--nav-background-color: #5b635c;
 }
 
 * {
