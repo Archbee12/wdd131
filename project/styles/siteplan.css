@@ -1,0 +1,67 @@
+:root {
+--primary-color: #5b635c ;
+--secondary-color: #28a745 ;
+--accent-color: #eaedea;
+
+--heading-font: "Roboto Slab";
+--paragraph-font: 'Roboto', Helvetica, sans-serif;
+
+--paragraph-color-on-white: #396E94;
+--paragraph-color-on-color: white;
+--paragraph-background-color: #291840 ;
+--nav-link-color: #396E94;
+--nav-background-color: #9babef;
+--nav-hover-link-color: #7c6f8c;
+--nav-hover-background-color: #ebebeb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 960px;
+  margin: 0 auto;
+  font-size: 18px;
+  text-align: center;
+}
+
+main {
+  padding: 0 2rem;
+}
+
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+.colors th:nth-child(1) {
+  background-color: var(--primary-color);
+}
+
+.colors th:nth-child(2) {
+  background-color: var(--secondary-color);
+}
+.colors th:nth-child(3) {
+  background-color: var(--accent-color);
+}
+
+.colors td {
+  width: 25%;
+  height: 3em;
+  color: #232323;
+}
+
+.card {
+  /* border: 1px solid ; */
+  margin: 1rem 0;
+  padding: .5rem 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
