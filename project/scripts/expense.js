@@ -9,9 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const categories = ['Food', 'Transportation', 'Entertainment', 'Utilities', 'Other'];
 
   populateCategoryOptions(categorySelect, categories);
-  populateCategoryOptions(filterCategory, [ ...categories]);
+  populateCategoryOptions(filterCategory, ['All', ...categories]);
 
   let editingRowIndex = null;
+
+  loadExpenses();
 
   expenseForm.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -29,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     expenseForm.reset();
     editingRowIndex = null;
+    saveExpenses();
     updateTotalExpenses();
   });
 
@@ -78,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function deleteRow(button) {
     const row = button.parentNode.parentNode;
     row.parentNode.removeChild(row);
+    saveExpenses();
     updateTotalExpenses();
   }
 
@@ -91,6 +95,29 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('category').value = row.cells[3].textContent;
 
     document.getElementById('rowIndex').value = row.rowIndex;
+  }
+
+  function saveExpenses() {
+    const expenses = [];
+    for (let i = 0; i < expensesTable.rows.length; i++) {
+      const row = expensesTable.rows[i];
+      const expense = {
+        date: row.cells[0].textContent,
+        description: row.cells[1].textContent,
+        amount: row.cells[2].textContent,
+        category: row.cells[3].textContent
+      };
+      expenses.push(expense);
+    }
+    localStorage.setItem('expenses', JSON.stringify(expenses));
+  }
+
+  function loadExpenses() {
+    const expenses = JSON.parse(localStorage.getItem('expenses')) || [];
+    expenses.forEach(expense => {
+      addRow(expense.date, expense.description, parseFloat(expense.amount), expense.category);
+    });
+    updateTotalExpenses();
   }
 
   function updateTotalExpenses() {
@@ -116,6 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
   updateTotalExpenses();
 });
 
+
 // For charting in the reports page
 document.addEventListener('DOMContentLoaded', () => {
   if (document.getElementById('expenses-chart')) {
@@ -137,3 +165,4 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 }
 );
+

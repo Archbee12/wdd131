@@ -22,13 +22,22 @@
   <main>
     <section>
       <h2>Expense Summary</h2>
+      <div>
+        <label for="time-interval">Select Time Interval:</label>
+        <select id="time-interval">
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="monthly">Monthly</option>
+        </select>
+      </div>
       <canvas id="expenses-chart"></canvas>
     </section>
   </main>
   <footer>
-    <p>&copy; 2024 Expense Tracker. All rights reserved.</p>
+  <p>&copy;<span id="currentYear"> </span> 🌟 Deborah Sarah Okon 🌟 Nigeria </p>
+  <p id="lastModified"></p>
   </footer>
-  <script defer src="scripts/expense.js"></script>
+  <script defer src="scripts/reports.js"></script>
   <script  src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 

@@ -17,6 +17,7 @@ body {
 
 header {
   padding: .5rem 0;
+  width: 100%;
 }
 
 header,
@@ -27,7 +28,7 @@ footer {
 }
 
 nav {
-  background-color: #5b635c;
+  background-color: var(--primary-color);
   color: #fff;
   padding: .5rem;
 }
@@ -51,9 +52,34 @@ nav a:active {
 
 main {
   padding: 2rem;
+  max-width: 960px;
+  min-width: 340px;
+  align-items: center;
+  justify-self: center;
+}
+
+/* Home Page Styling */
+.card {
+  margin: 1rem 0;
+  padding: .5rem 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  border-radius: .5rem;
+}
+
+.expense-button {
+  text-align: center;
+}
+
+p {
+  margin: .5rem auto;
 }
 
 /* Expense Tracker Page */
+.form-container {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 1rem;
+  background-color: #fff;
+}
 
 form label {
   display: block;
@@ -80,13 +106,13 @@ table {
 
 table th,
 table td {
-  border: 1px solid #ddd;
+  border: 2px solid var(--accent-color);
   padding: 0.5rem;
   text-align: left;
 }
 
 table th {
-  background-color: #f4f4f4;
+  background-color: var(--primary-color);
 }
 
 button {
@@ -147,4 +173,77 @@ footer p:nth-child(1) {
 
 footer p:nth-child(2) {
   margin-top: 0.125rem;
+}
+
+@media (min-width: 760px) {
+  .overview {
+      grid-template-columns:  350px 1fr;
+      display: grid;
+      gap: 2rem;
+  }
+
+  .overview div:nth-child(1) {
+    margin: 2.5rem;
+  }
+
+  main {
+    padding: 2rem;
+    max-width: 1600px;
+  }
+
+  h2 {
+    text-align: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .overview {
+      grid-template-columns: 1fr 1fr ;
+      display: grid;
+      gap: 1rem;
+  }
+}
+
+@media (max-width: 760px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-container,
+  .card {
+    padding: 1rem 0.5rem;
+  }
+
+  table th,
+  table td {
+    font-size: 14px;
+  }
+
+  form input,
+  form select,
+  button {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .filter select {
+    width: 100%;
+    padding: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filter {
+    text-align: center;
+  }
 }
