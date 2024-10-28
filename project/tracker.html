@@ -7,6 +7,7 @@
   <title>Expense Tracker</title>
   <link rel="stylesheet" href="styles/expense.css">
   <script defer src="scripts/expense.js"></script>
+  <script defer src="scripts/reports.js"></script>
 </head>
 
 <body>
@@ -15,8 +16,8 @@
   </header>
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="tracker.html">Expense Tracker</a></li>
+      <li><a href="index.html" >Home</a></li>
+      <li><a href="tracker.html" class="active">Expense Tracker</a></li>
       <li><a href="reports.html">Reports</a></li>
     </ul>
   </nav>
@@ -35,7 +36,7 @@
           <option value="" disabled selected>Select Category</option>
           
         </select>
-        <button type="submit">Add Expense</button>
+        <button type="submit" class="add-expense">Add Expense</button>
       </form>
       <table id="expenses-table">
         <thead>

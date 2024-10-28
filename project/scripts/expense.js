@@ -144,25 +144,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// For charting in the reports page
-document.addEventListener('DOMContentLoaded', () => {
-  if (document.getElementById('expenses-chart')) {
-    const ctx = document.getElementById('expenses-chart').getContext('2d');
-    new Chart(ctx, {
-      type: 'bar', // or 'line', 'pie', etc.
-      data: {
-        labels: ['Expense 1', 'Expense 2'], // Dynamic labels based on expenses
-        datasets: [{
-          label: 'Expenses',
-          data: [30, 70], // Dynamic data based on expenses
-          backgroundColor: ['#333', '#555'],
-        }]
-      },
-      options: {
-        responsive: true,
-      }
-    })
+
+
+const currentYear = document.querySelector("#currentYear");
+
+// use the date object
+const today = new Date();
+
+currentYear.innerHTML = `<span class="highlight">${today.getFullYear()}</span>`;
+
+let oLastModif = new Date(document.lastModified);
+lastModified.innerHTML = `Last Modified: <span class="highlight">${new Intl.DateTimeFormat(
+  "en-US",
+  {
+    dateStyle: "medium",
+    timeStyle: "medium",
   }
-}
-);
+).format(today)}</span>`; 
 

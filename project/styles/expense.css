@@ -1,7 +1,9 @@
 :root {
-  --secondary-color: #28a745;
-  --accent-color: #eaedea;
-  --primary-color: #5b635c;
+  --secondary-color: #198632;
+  --accent-color: #ffffff;
+  --primary-color: #393e39;
+  --accent2-color: #393e3927;
+  --body-background-color: #eaedea;
 }
 
 * {
@@ -12,18 +14,17 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #eaedea;
+  background-color: var(--body-background-color);
 }
 
 header {
   padding: .5rem 0;
-  width: 100%;
 }
 
 header,
 footer {
   background-color: var(--secondary-color);
-  color: #fff;
+  color: #ffffff;
   text-align: center;
 }
 
@@ -46,15 +47,18 @@ nav a {
 
 nav a:hover,
 nav a:active {
-  color: rgb(209, 192, 192);
+  color: rgb(226, 226, 226);
+}
 
+nav a.active {
+  color: var(--accent-color);
+  border-radius: 5px;
+  padding: .6rem;
+  font-weight: 700;
 }
 
 main {
-  padding: 2rem;
-  max-width: 960px;
-  min-width: 340px;
-  align-items: center;
+  /* align-items: center; */
   justify-self: center;
 }
 
@@ -64,9 +68,14 @@ main {
   padding: .5rem 2rem;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   border-radius: .5rem;
+  background-color: var(--accent2-color);
 }
 
 .expense-button {
+  text-align: center;
+}
+
+.heading {
   text-align: center;
 }
 
@@ -98,6 +107,10 @@ form select {
   border-bottom: .2rem solid var(--secondary-color);
 }
 
+.add-expense {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -113,11 +126,12 @@ table td {
 
 table th {
   background-color: var(--primary-color);
+  color: #ffffff;
 }
 
 button {
   background-color: var(--secondary-color);
-  color: #fff;
+  color: #ffffff;
   border: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
@@ -129,6 +143,7 @@ button:hover {
 
 .delete-btn {
  background-color: #333;
+ color: #ffffff;
 }
 
 .delete-btn:hover {
@@ -162,6 +177,13 @@ button:hover {
   border-bottom: .2rem solid var(--secondary-color);
 }
 
+/* Report Styling */
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 footer {
   text-align: center;
   padding: 1rem;
@@ -176,10 +198,51 @@ footer p:nth-child(2) {
 }
 
 @media (min-width: 760px) {
+  nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+    overflow: hidden;
+    padding: 0.6rem;
+  }
+
+  nav a:hover,
+  nav a:active {
+    color: rgb(226, 226, 226);
+  }
+
+  nav a.active {
+    color: var(--accent-color);
+    border-radius: 5px;
+    padding: .6rem;
+    font-weight: 700;
+  }
+
+  nav a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: .4rem;
+    background-color: var(--body-background-color);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+    /* transition: border-bottom 0.3s; */
+  }
+  
+    nav a:hover::after,
+    nav a:active::after,
+    nav a.active::after {
+      transform: scaleX(1);
+    }
+
   .overview {
-      grid-template-columns:  350px 1fr;
-      display: grid;
-      gap: 2rem;
+    grid-template-columns:  350px 1fr;
+    display: grid;
+    gap: 2rem;
   }
 
   .overview div:nth-child(1) {
@@ -188,7 +251,7 @@ footer p:nth-child(2) {
 
   main {
     padding: 2rem;
-    max-width: 1600px;
+    max-width: 1240px;
   }
 
   h2 {
@@ -198,19 +261,14 @@ footer p:nth-child(2) {
 
 @media (min-width: 1200px) {
   .overview {
-      grid-template-columns: 1fr 1fr ;
-      display: grid;
-      gap: 1rem;
+    grid-template-columns: 1fr 1fr ;
+    display: grid;
+    gap: 1rem;
   }
 }
 
 @media (max-width: 760px) {
-  nav ul {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .form-container,
+ .form-container,
   .card {
     padding: 1rem 0.5rem;
   }
@@ -225,11 +283,12 @@ footer p:nth-child(2) {
   button {
     width: 100%;
     padding: 0.5rem;
+    margin: 1rem 0;
   }
 
   .filter select {
     width: 100%;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 }
 
@@ -245,5 +304,9 @@ footer p:nth-child(2) {
 
   .filter {
     text-align: center;
+  }
+
+  label {
+    display: block;
   }
 }
