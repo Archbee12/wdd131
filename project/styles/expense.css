@@ -1,5 +1,5 @@
 :root {
-  --secondary-color: #13772a;
+  --secondary-color: #09601d;
   --accent-color: #ffffff;
   --primary-color: #393e39;
   --accent2-color: #393e3927;
@@ -98,8 +98,11 @@ nav a.active {
 }
 
 main {
-  /* align-items: center; */
-  justify-self: center;
+  padding: 1rem;
+}
+
+h1, h2, p {
+  text-align: center;
   padding: 1rem;
 }
 
@@ -129,6 +132,7 @@ p {
 }
 
 /* Expense Tracker Page */
+
 .form-container {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   padding: 1rem;
@@ -150,6 +154,14 @@ form input {
 form select {
   padding: .4rem;
   border-bottom: .2rem solid var(--secondary-color);
+}
+
+form input,
+form select,
+button {
+  /* width: 100%; */
+  padding: 0.5rem;
+  margin: .5rem 0;
 }
 
 .add-expense {
@@ -182,22 +194,13 @@ button {
   cursor: pointer;
 }
 
-button:hover {
-  background-color: var(--secondary-color);
-}
-
 .delete-btn {
- background-color: #333;
- color: #ffffff;
-}
-
-.delete-btn:hover {
-  background-color: #6f6d6d;
+  background-color: #333;
+  color: #ffffff;
 }
 
 .edit-btn {
   background-color: var(--secondary-color);
-  margin: .25rem 0;
 }
 
 #total-expenses {
@@ -222,11 +225,10 @@ button:hover {
   border-bottom: .2rem solid var(--secondary-color);
 }
 
-/* Report Styling */
-canvas {
-  display: block;
-  max-width: 100%;
-  height: auto;
+#expenses-chart {
+  padding: 1rem;
+  max-width: 760px;
+  place-self: center;
 }
 
 footer {
@@ -244,18 +246,13 @@ footer p:nth-child(2) {
 
 @media (min-width: 760px) {
   .overview {
-    grid-template-columns:  350px 1fr;
+    grid-template-columns: 350px 1fr;
     display: grid;
     gap: 2rem;
   }
 
   .overview div:nth-child(1) {
     margin: 2.5rem;
-  }
-
-  main {
-    padding: 2rem;
-    max-width: 1240px;
   }
 
   h2 {
@@ -265,7 +262,7 @@ footer p:nth-child(2) {
 
 @media (min-width: 1200px) {
   .overview {
-    grid-template-columns: 1fr 1fr ;
+    grid-template-columns: 1fr 1fr;
     display: grid;
     gap: 1rem;
   }
@@ -273,10 +270,7 @@ footer p:nth-child(2) {
 
 @media (max-width: 760px) {
 
-  main {
-      text-align: center;
-  }
- .form-container,
+  .form-container,
   .card {
     padding: 1rem 0.5rem;
   }
@@ -286,17 +280,23 @@ footer p:nth-child(2) {
     font-size: 14px;
   }
 
-  form input,
-  form select,
-  .add-expense {
-    width: 100%;
-    padding: 0.5rem;
-    margin: .5rem 0;
-  }
-
 }
 
 @media (max-width: 480px) {
+
+  main {
+    padding: .5rem;
+  }
+  .form-container,
+  form input,
+  form select,
+  button {
+    padding: 0.3rem;
+  }
+
+  form label {
+    font-size: 0.9rem;
+  }
 
   nav ul {
     flex-direction: column;
@@ -305,10 +305,23 @@ footer p:nth-child(2) {
   }
 
   .filter {
-    text-align: center;
+    text-align: right;
   }
 
   label {
     display: block;
+  }
+
+  table th,
+  table td {
+    font-size: 10px;
+  }
+
+  .delete-btn {
+    font-size: 10px;
+  }
+
+  .edit-btn {
+    font-size: 10px;
   }
 }
