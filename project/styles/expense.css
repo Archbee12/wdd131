@@ -101,7 +101,7 @@ main {
   padding: 1rem;
 }
 
-h1, h2 {
+main h1, main h2 {
   color: var(--secondary-color);
   text-align: center;
   padding: 1rem;
