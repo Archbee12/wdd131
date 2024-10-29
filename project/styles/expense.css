@@ -101,12 +101,17 @@ main {
   padding: 1rem;
 }
 
-h1, h2, p {
+h1, h2 {
   text-align: center;
   padding: 1rem;
 }
 
 /* Home Page Styling */
+
+section {
+  padding: 0 2rem;
+}
+
 .card {
   margin: 1rem 0;
   padding: .5rem 2rem;
