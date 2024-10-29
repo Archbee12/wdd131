@@ -102,6 +102,7 @@ main {
 }
 
 h1, h2 {
+  color: var(--secondary-color);
   text-align: center;
   padding: 1rem;
 }
