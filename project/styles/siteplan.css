@@ -25,17 +25,17 @@ header {
 body {
   max-width: 960px;
   margin: 0 auto;
-  font-size: 18px;
+  font-size: 14px;
   text-align: center;
 }
 
 main {
-  padding: 0 2rem;
+  padding: 0 1rem;
 }
 
 .colors {
   width: 100%;
-  min-width: 350px;
+  min-width: 250px;
   margin: 30px auto;
   text-align: center;
 }
@@ -52,7 +52,7 @@ main {
 }
 
 .colors td {
-  width: 25%;
+  width: 20%;
   height: 3em;
   color: #232323;
 }
